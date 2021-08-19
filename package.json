@@ -1,0 +1,22 @@
+{
+    "name": "trillo",
+    "version": "1.0.0",
+    "description": "HTML/CSS Website",
+    "main": "index.html",
+    "scripts": {
+        "compile:sass": "node-sass sass/main.scss css/main.css -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LordPrinz/Trillo.git"
+    },
+    "author": "Oskar Płaziński",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/LordPrinz/Trillo/issues"
+    },
+    "homepage": "https://github.com/LordPrinz/Trillo#readme",
+    "devDependencies": {
+        "node-sass": "^6.0.1"
+    }
+}
