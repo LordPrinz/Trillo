@@ -139,3 +139,18 @@
         fill: currentColor;
     }
 }
+
+.legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.gallery {
+    display: flex;
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
