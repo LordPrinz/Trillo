@@ -1,13 +1,22 @@
+////////////////////////////////////////
+// LOGO
 .logo {
     height: 3.25rem;
     margin-left: 2rem;
 }
 
+////////////////////////////////////////
+// SEARCH
 .search {
     flex: 0 0 40%;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -45,9 +54,12 @@
     &__icon {
         height: 2rem;
         width: 2rem;
+        fill: var(--color-grey-dark-3);
     }
 }
 
+////////////////////////////////////////
+// USER NAVIGATION
 .user-nav {
     align-self: stretch;
     display: flex;
@@ -91,14 +103,26 @@
     }
 }
 
+////////////////////////////////////////
+// SIDE NAVIGATION
 .side-nav {
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
     &__item {
         position: relative;
         &:not(:last-child) {
             margin-bottom: 0.5rem;
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
         }
     }
     &__item::before {
@@ -131,22 +155,43 @@
         z-index: 10;
         display: flex;
         align-items: center;
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem 0.5rem;
+        }
     }
     &__icon {
         width: 1.75rem;
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: 0.7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 
+////////////////////////////////////////
+// LEGAL TEXT
 .legal {
     font-size: 1.2rem;
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
+////////////////////////////////////////
+// GALLERY
 .gallery {
     display: flex;
     &__photo {
@@ -155,6 +200,8 @@
     }
 }
 
+////////////////////////////////////////
+// HOTEL OVERVIEW
 .overview {
     display: flex;
     align-items: center;
@@ -165,6 +212,10 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
     }
     &__stars {
         margin-right: auto;
@@ -194,18 +245,29 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
     }
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+        }
     }
     &__rating-count {
         font-size: 0.8rem;
         text-transform: uppercase;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 0.5rem;
+        }
     }
 }
 
+////////////////////////////////////////
+// BUTTON INLINE
 .btn-inline {
     border: none;
     color: var(--color-primary);
@@ -247,10 +309,14 @@
     }
 }
 
+////////////////////////////////////////
+// PARAGRAPH
 .paragraph:not(:last-of-type) {
     margin-bottom: 2rem;
 }
 
+////////////////////////////////////////
+// LIST
 .list {
     list-style: none;
     margin: 3rem 0;
@@ -284,6 +350,8 @@
     }
 }
 
+////////////////////////////////////////
+// RECOMMEND
 .recommend {
     font-size: 1.3rem;
     color: var(--color-grey-dark-3);
@@ -307,6 +375,8 @@
     }
 }
 
+////////////////////////////////////////
+// REVIEWS
 .review {
     background-color: #fff;
     box-shadow: var(--shadow-light);
@@ -314,6 +384,10 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
     &__text {
         margin-bottom: 2rem;
         z-index: 10;
@@ -360,9 +434,14 @@
     }
 }
 
+////////////////////////////////////////
+// CALL TO ACTION
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
     &__book-now {
         font-size: 2rem;
         font-weight: 300;
@@ -371,6 +450,8 @@
     }
 }
 
+////////////////////////////////////////
+// CALL TO ACTION
 .btn {
     font-size: 1.5rem;
     font-weight: 300;
