@@ -1,22 +1,24 @@
 {
     "name": "trillo",
     "version": "1.0.0",
-    "description": "HTML/CSS Website",
+    "description": "Landing page of Trillo trips center",
     "main": "index.html",
     "scripts": {
-        "compile:sass": "node-sass sass/main.scss css/main.css -w"
+        "compile:sass": "node-sass sass/main.scss css/main.css -w",
+        "start": "lite-server"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/LordPrinz/Trillo.git"
     },
-    "author": "Oskar Płaziński",
+    "author": "LordPrinz",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/LordPrinz/Trillo/issues"
     },
     "homepage": "https://github.com/LordPrinz/Trillo#readme",
     "devDependencies": {
+        "lite-server": "^2.6.1",
         "node-sass": "^6.0.1"
     }
 }
